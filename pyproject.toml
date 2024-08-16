@@ -1,0 +1,32 @@
+[tool.mypy]
+strict = true
+exclude = ["tests/*", "config/*"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "N",   # pep8-naming
+    "ANN", # flake8-annotations
+    "C4", # flake8-comprehensions
+    "SIM", # flake8-simplify
+    "R",
+    "FAST", # FastAPI
+    "FURB"
+
+]
+
+ignore = [
+    "E501", # line too long, handled by black
+    "B008", # do not perform function calls in argument defaults
+    "C901", # too complex
+    "W191", # indentation contains tabs
+    "B904", # raise exceptions with `raise ... from err` or `raise ... from None`
+    "W293", # Blank line contains whitespace
+    "ANN101", # Missing type annotation for self in method
+]
